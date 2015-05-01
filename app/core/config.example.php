@@ -9,6 +9,9 @@
  * @version 2.1
  * @date June 27, 2014
  */
+ 
+use helpers\session;
+ 
 class Config {
 
 	public function __construct() {
@@ -48,10 +51,10 @@ class Config {
 		date_default_timezone_set('Europe/London');
 
 		//start sessions
-		\helpers\session::init();
+		session::init();
 
 		//set the default template
-		\helpers\session::set('template', 'default');
+		session::set('template', 'default');
 	}
 
 }
